@@ -23,3 +23,13 @@ Strings on tickets are not always the same length.
 
 
 // Solution
+
+function bingo(ticket, win) {
+  let count = 0;
+  ticket.forEach(game => {
+    if (game[0].includes(String.fromCharCode(game[1]))) {
+      count++;
+    }
+  });
+  return (count >= win) ? "Winner!" : "Loser!";
+}
